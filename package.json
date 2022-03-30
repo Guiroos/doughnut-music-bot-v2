@@ -7,6 +7,10 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node index.js load && node index.js"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Guiroos/doughnut-music-bot-v2.git"
+  },
   "keywords": [],
   "author": "guiroos",
   "license": "ISC",
