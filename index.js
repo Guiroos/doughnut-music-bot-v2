@@ -54,7 +54,7 @@ else {
   })
   client.on("interactionCreate", (interaction) => {
     const role = interaction.member._roles;
-    const verifyRole = role.includes('811701475419881483') || role.includes('297031780299571210') || role.includes('297032710919159808');
+    const verifyRole = role.includes('958225079169323049');
     if(verifyRole){
       async function handleCommand() {
         if (!interaction.isCommand()) return;
@@ -72,3 +72,5 @@ else {
   })
   client.login(TOKEN)
 }
+
+// role.includes('811701475419881483') || role.includes('297031780299571210') || role.includes('297032710919159808') ||

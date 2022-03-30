@@ -5,9 +5,9 @@ module.exports = {
 	run: async ({ client, interaction }) => {
 		const queue = client.player.getQueue(interaction.guildId)
 
-		if (!queue) return await interaction.editReply("Não tem músicas na fila")
+		if (!queue) return interaction.editReply("Não tem músicas na fila")
 
 		queue.setPaused(false)
-        await interaction.editReply("Música despausada! Use '/pause' pausar a música")
+    await interaction.editReply("Música despausada! Use '/pause' pausar a música")
 	},
 }
