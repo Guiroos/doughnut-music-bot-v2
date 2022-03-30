@@ -6,15 +6,16 @@ module.exports = {
 	run: async ({ client, interaction }) => {
 		const queue = client.player.getQueue(interaction.guildId)
 
-		if (!queue) return await interaction.editReply("Não tem músicas na fila...")
+		if (!queue) return interaction.editReply("Não tem músicas na fila...")
 
-        const currentSong = queue.current
+    const currentSong = queue.current
 
 		queue.skip()
-        await interaction.editReply({
-            embeds: [
-                new MessageEmbed().setDescription(`${currentSong.title} foi pulada!`).setThumbnail(currentSong.thumbnail)
-            ]
-        })
+		
+    await interaction.editReply({
+      embeds: [
+        new MessageEmbed().setDescription(`${currentSong.title} foi pulada!`).setThumbnail(currentSong.thumbnail)
+      ]
+    })
 	},
 }
